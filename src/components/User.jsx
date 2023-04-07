@@ -4,6 +4,7 @@ export const User = (user) => {
 
   const handleClick = () => setIsFollowing(!isFollowing)
   const changeClass = isFollowing ? 'following' : ''
+  const buttonText = isFollowing ? 'Siguiendo' : 'Seguir'
 
   return (
     <div className='user-container'>
@@ -19,7 +20,7 @@ export const User = (user) => {
         </div>
       </div>
       <button className={changeClass} onClick={handleClick}>
-        <span className='button-text'>{isFollowing ? 'Siguiendo' : 'Seguir'}</span>
+        <span className='button-text'>{buttonText}</span>
         <span className='nofollowing'>Dejar de seguir</span>
       </button>
     </div>
