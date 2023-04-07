@@ -54,24 +54,42 @@ strong.name {
 }
 
 button {
-  width: 100px;
+  width: 120px;
   height: 40px;
   margin: auto 0;
   border: none;
   outline: none;
   background-color: #fff;
   color: #000;
-  font-weight: 800;
+  font-weight: 700;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
-  transition: .2s ease-in;
+  transition: background-color .2s ease-in;
 }
 button:hover {
   color: #fff;
   background-color: #000;
 }
+button.button-text {
+  display: block;
+}
 button.following {
-  background-color: #000;
+  background-color: transparent;
+  border: 2px solid #bbb;
   color: #fff;
+}
+button.following:hover {
+  background-color: #e52b2b34;
+  border-color: #e52b2b;
+  transition: background-color .3s ease;
+}
+button.following:hover .nofollowing {
+  display: block;
+}
+button.following:hover .button-text {
+  display: none;
+}
+span.nofollowing {
+  display: none;
 }
